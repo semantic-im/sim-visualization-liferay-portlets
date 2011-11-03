@@ -1,0 +1,21 @@
+document.getElementById('<portlet:namespace />editForm').metricName.disabled=true;
+document.getElementById('<portlet:namespace />editForm').limit.disabled=true;
+document.getElementById('<portlet:namespace />editForm').pageSize.disabled=true;
+document.getElementById('<portlet:namespace />editForm').tableName.disabled=true;
+document.getElementById('<portlet:namespace />editForm').useMetrics.disabled=true;
+			
+onchange='<portlet:namespace/>updateMetrics(this.options[this.options.selectedIndex].value);'
+
+<script type="text/javascript"><portlet:namespace/>updateMetrics(<%=useMetrics%>);</script>
+
+
+function MTablePortletInstance (useQuery, mysqlQuery, tableName, metricName, useMetrics, pageSize, limit, portletID){ 
+	this.useQuery = useQuery;
+	this.mysqlQuery = mysqlQuery;
+	this.tableName = tableName;
+	this.metricName = metricName;
+	this.useMetrics = useMetrics;
+	this.pageSize = pageSize;
+	this.limit = limit;
+    this.portletID = portletID;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="ro.utcluj.larkc.jsonservice.service.pluginMetricsLocalService" class="ro.utcluj.larkc.jsonservice.service.impl.pluginMetricsLocalServiceImpl" />
+	<bean id="ro.utcluj.larkc.jsonservice.service.pluginMetricsLocalServiceUtil" class="ro.utcluj.larkc.jsonservice.service.pluginMetricsLocalServiceUtil">
+		<property name="service" ref="ro.utcluj.larkc.jsonservice.service.pluginMetricsLocalService" />
+	</bean>
+	<bean id="ro.utcluj.larkc.jsonservice.service.pluginMetricsService" class="ro.utcluj.larkc.jsonservice.service.impl.pluginMetricsServiceImpl" />
+	<bean id="ro.utcluj.larkc.jsonservice.service.pluginMetricsServiceUtil" class="ro.utcluj.larkc.jsonservice.service.pluginMetricsServiceUtil">
+		<property name="service" ref="ro.utcluj.larkc.jsonservice.service.pluginMetricsService" />
+	</bean>
+	<bean id="ro.utcluj.larkc.jsonservice.service.persistence.pluginMetricsPersistence" class="ro.utcluj.larkc.jsonservice.service.persistence.pluginMetricsPersistenceImpl" parent="basePersistence" />
+</beans>

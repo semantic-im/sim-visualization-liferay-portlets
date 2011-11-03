@@ -1,0 +1,31 @@
+.myMetricsTable {
+	border: 1px solid #AAAAAA;
+	border-collapse: separate;
+	border-spacing:2px 2px;
+}
+
+.myMetricsTableHeader {
+	border-collapse: separate;
+	border-spacing:2px 2px;
+	background-color: #2062B8;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+	text-align:center;
+}
+
+.myMetricsTableRow {
+	border-collapse: separate;
+	border-spacing:2px 2px;
+	background-color: #DDDDDD;
+	color: 444444;
+	cursor: pointer;
+	text-align:center;
+}
+.myMetricsScrol {
+	overflow:auto;
+}
+
+.visCellTable{
+	width:85%;
+}
